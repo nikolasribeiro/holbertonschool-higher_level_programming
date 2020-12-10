@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-from sys import argv
-
-
-def print_on_console(validator, count, formatter=""):
-    if validator:
-        print("{}: {}".format(count, formatter))
-    else:
-        print("{} argument. ".format(count))
-
-
 if __name__ == "__main__":
+    from sys import argv
+
+    def print_on_console(validator, count, formatter=""):
+        if validator:
+            print("{}: {}".format(count, formatter))
+        else:
+            print("{} argument. ".format(count))
+
     total_arguments = len(argv) - 1
 
     if total_arguments == 0:
