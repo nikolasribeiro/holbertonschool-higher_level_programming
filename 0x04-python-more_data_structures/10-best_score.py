@@ -1,4 +1,13 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if a_dictionary:
-        return sorted(a_dictionary)[-1]
+
+    if not isinstance(a_dictionary, dict) or len(a_dictionary) == 0:
+        return None
+
+    participant = list(a_dictionary.keys())[0]
+    big = a_dictionary[participant]
+    for key, value in a_dictionary.items():
+        if value > big:
+            big = value
+            participant = key
+    return (participant)
