@@ -20,7 +20,8 @@ def roman_to_int(roman_string):
         if roman_dict.get(roman_string[loop_variable], 0) == 0:
             return (0)
 
-        if (loop_variable != (len(roman_string) - 1) and roman_dict[roman_string[loop_variable]] <
+        if (loop_variable != (len(roman_string) - 1) and
+                roman_dict[roman_string[loop_variable]] <
                 roman_dict[roman_string[loop_variable + 1]]):
             num += roman_dict[roman_string[loop_variable]] * -1
 
