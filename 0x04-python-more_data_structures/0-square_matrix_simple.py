@@ -5,5 +5,5 @@ def square_matrix_simple(matrix=[]):
     for trinity in matrix:
         trinity = list(map(lambda agent: agent * agent, trinity))
         neo.append(trinity)
-    
+
     return neo

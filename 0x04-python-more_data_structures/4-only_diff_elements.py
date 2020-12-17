@@ -6,6 +6,6 @@ def only_diff_elements(set_1, set_2):
     & = Intersection
     - = Diferent
     ^ = Symmetric difference
-    
+
     """
     return (set_1 ^ set_2)
