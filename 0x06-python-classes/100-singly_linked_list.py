@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" linked list """
+""" linked list with python"""
 
 
 class Node:
     """ Node Class """
 
     def __init__(self, data, next_node=None):
-        """ Init note """
+        """ Init node """
         self.data = data
         self.next_node = next_node
 
