@@ -1,0 +1,61 @@
+------ test cases for text identation ------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hola Mundo desde. prueba de testeo? Aqui dice lo siguiente: Nico")
+Hola Mundo desde.
+<BLANKLINE>
+prueba de testeo?
+<BLANKLINE>
+Aqui dice lo siguiente:
+<BLANKLINE>
+Nico
+
+>>> text_indentation(123456789)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation("..??::")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+:
+<BLANKLINE>
+
+>>> text_indentation("Nicolas.     Ribeiro?:Exist:en ?arias Al.ternat:ivas?")
+Nicolas.
+<BLANKLINE>
+Ribeiro?
+<BLANKLINE>
+:
+<BLANKLINE>
+Exist:
+<BLANKLINE>
+en ?
+<BLANKLINE>
+arias Al.
+<BLANKLINE>
+ternat:
+<BLANKLINE>
+ivas?
+<BLANKLINE>
+
+>>> text_indentation(1234, "Watson Talk")
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+>>> text_indentation("Este texto deberia de imprimirse sin ningun salto ni problema")
+Este texto deberia de imprimirse sin ningun salto ni problema
+
+>>> text_indentation()
+Traceback (most recent call last):
+    ...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
