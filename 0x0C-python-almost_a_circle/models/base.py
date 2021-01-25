@@ -8,6 +8,7 @@ import os
 
 class Base:
     """ class Base """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -21,14 +22,14 @@ class Base:
     def to_json_string(list_dictionaries):
         """ function to_json_string """
         if list_dictionaries is None or list_dictionaries == []:
-            return '[]'
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """ function save_to_file """
         file = cls.__name__ + ".json"
-        with open(file, 'w') as js_file:
+        with open(file, "w") as js_file:
             if list_objs is None:
                 js_file.write("[]")
             else:

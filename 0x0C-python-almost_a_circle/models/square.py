@@ -26,7 +26,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """ function update """
         if len(args):
-            key = ['id', 'size', 'x', 'y']
+            key = ["id", "size", "x", "y"]
             idx = 0
             for value in args:
                 if idx < 4:
@@ -38,9 +38,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """ function to_dictionary """
-        return {
-            'id': self.id,
-            'x': self.x,
-            'size': self.size,
-            'y': self.y
-        }
+        return {"id": self.id, "x": self.x, "size": self.size, "y": self.y}
