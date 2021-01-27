@@ -13,7 +13,7 @@ class Base:
 
     def __init__(self, id=None):
         """ function __init__ """
-        if id is not None:
+        if id is not None or not isinstance(id, int):
             self.id = id
         Base.__nb_objects += 1
         self.id = self.__nb_objects
@@ -42,7 +42,9 @@ class Base:
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
+    
 
+    '''
     @classmethod
     def create(cls, **dictionary):
         """ function create """
@@ -52,6 +54,7 @@ class Base:
             ret_cls = cls(1, 1)
         ret_cls.update(**dictionary)
         return ret_cls
+    
 
     @classmethod
     def load_from_file(cls):
@@ -66,3 +69,4 @@ class Base:
         input_li = Base.from_json_string(data)
         ret_li = [cls.create(**obj) for obj in input_li]
         return ret_li
+    '''
