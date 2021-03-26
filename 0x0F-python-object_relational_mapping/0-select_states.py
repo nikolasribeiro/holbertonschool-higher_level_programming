@@ -1,12 +1,4 @@
 #!/usr/bin/python3
-"""
-Lists all states from the database hbtn_0e_0_usa
-Arguments:
-    mysql_username - username to connect the mySQL
-    mysql passwd - password to connect the mySQL
-    database_name - Name of the database
-    http://www.mikusa.com/python-mysql-docs/index.html
-"""
 
 
 import MySQLdb
@@ -26,7 +18,6 @@ if __name__ == "__main__":
         charset="utf8",
     )
     cur = db.cursor()
-    # The execute function requires one parameter, the query.
     cur.execute("SELECT * FROM states ORDER BY id ASC")
     all_rows = cur.fetchall()
     for row in all_rows:

@@ -21,7 +21,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    # session.query(State)...etc returns a list
     my_states = session.query(State).order_by(State.id).all()
     for state in my_states:
         if "a" in state.name:

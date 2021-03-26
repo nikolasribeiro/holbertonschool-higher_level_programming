@@ -22,7 +22,6 @@ if __name__ == "__main__":
     cur = db.cursor()
     statement = """SELECT *FROM states
     WHERE BINARY states.name = %s ORDER BY states.id ASC"""
-    # The execute function requires one parameter, the sql query.
     cur.execute(statement, (name_to_search,))
     all_rows = cur.fetchall()
     for row in all_rows:
